@@ -100,7 +100,7 @@ jobs:
         if: ${{ github.repository == 'arthuro555/steamworks.js' && github.event_name == 'push' }}
 
         runs-on: ubuntu-latest
-        needs: build
+        needs: [build, build-mac]
 
         steps:
             - uses: actions/checkout@v3
